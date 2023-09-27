@@ -1,0 +1,508 @@
+@import '_variables';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $main;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  text-transform: capitalize;
+
+}
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: $open-sans;
+  font-weight: 300;
+}
+.carousel-container {
+  border-bottom: 10px solid rgb(151, 151, 151);
+  width: 100%;
+  height: 90vh;
+  .mySwiper{
+    height: 100%;
+    .swiper-button-next , .swiper-button-prev {
+      color: white;
+    }
+    .swiper-slide{
+      @include flex(center, center, _, _);
+      .actions {
+        @include flex(center, center, column, 3rem);
+        border: 1px solid red;
+        height: 10rem;
+        h3 {
+          font-size: 38px;
+          font-weight: 200;
+          color: white;
+        }
+        .btns {
+          @include flex(center, center, _, 3rem);
+          .mainBtn {
+            text-decoration: none;
+            transition: .3s ease-in-out;
+            color: $secondary;
+            background-color: white;
+            padding: .7rem 1.2rem;
+            border-radius: 50px;
+            &:hover {
+              background-color: $secondary;
+              color: white;
+            }
+          }
+          .secondaryBtn{
+            text-decoration: none;
+            transition: .3s ease-in-out;
+            padding: .7rem 1.2rem;
+            color: white;
+            border: 2px solid white;
+            border-radius: 50px;
+            &:hover {
+              background-color: white;
+              color: $secondary;
+            }
+          }
+
+        }
+      }
+    }
+    .swiper-slide:first-child {
+      background-image: url("/public/slide-01.jpg");
+    }
+    .swiper-slide:nth-child(2) {
+      background-image: url("/public/slide-02.jpg");
+    }
+    .swiper-slide:nth-child(3) {
+      background-image: url("/public/slide-03.jpg");
+    }
+  }
+}
+.about{
+  height: 80vh;
+  border-bottom: 4px solid rgb(235, 235, 235);
+  margin:0 5rem;
+  @include flex(center, flex-start, column, _);
+  h1 {
+    color: $secondary;
+    font-weight: 200;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-size: 38px;
+    margin-bottom: 1rem;
+
+  }
+  .icons {
+    @include flex(space-evenly, center, _, _);
+    flex-wrap: wrap;
+    .twos:nth-child(1){
+      margin: 0 15rem 0 0;
+    }
+    .twos {
+
+      .icon{
+        @include flex(space-evenly, center, _, _);
+        width: 10rem;
+        margin: 0 1rem 2rem 0;
+        i{
+          color: white;
+          background: $accents;
+          padding: .7rem;
+          font-size: 22px;
+          border-radius: 50%;
+        }
+        p{
+          font-weight: 700;
+        }
+      }
+    }
+  }
+  .btn {
+    background-color: $secondary;
+    padding: .7rem 1.5rem ;
+    border-radius: 25px;
+    color: white;
+    text-decoration: none;
+    i {
+      transition: .3s ease-in-out;
+      margin: 0 0 0 .2rem;
+    }
+    &:hover {
+      i {
+        margin: 0 0 0 .8rem;
+      }
+    }
+  }
+}
+.features-container {
+  height: 50vh;
+  border-bottom: 4px solid rgb(235, 235, 235);
+
+  display: flex;
+  margin: 0 5rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .feature{
+    padding: 4rem 0;
+    display: flex;
+    gap: 1.5rem;
+    width: 24rem;
+    I{
+      font-size: 48px;
+      color: $secondary;
+    }
+    .content{
+      @include flex(flex-start, _, column, 1rem);
+      h3{
+        font-size: 17px;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+        transition: .3s ease-in-out;
+        display: flex;
+        i{
+          font-size: 18px;
+          color: black;
+          transition: .3s ease-in-out;
+          margin-left: .2rem;
+        }
+        &:hover {
+          color: $secondary;
+          i{
+            margin-left: .4rem;
+          }
+        }
+
+      }
+      p{
+        color: grey;
+      }
+    }
+  }
+
+}
+.newsletter {
+  height: 65vh;
+  background-image: url("/public/slide-02.jpg");
+  color: white;
+  @include flex(center, center, _, _);
+  .news-content {
+    @include flex(center, center, column, 1.5rem);
+    width: 60%;
+    p {
+      text-align: center;
+    }
+    form{
+      width: 100%;
+      display: flex;
+      @include flex(center, _, _, 1rem);
+      input {
+        padding: .8rem 2rem;
+        width: 60%;
+        background: transparent;
+        outline: none;
+        border: 1px solid white;
+        border-radius: 50px;
+        text-transform: uppercase;
+        color: white;
+      }
+      input::placeholder {
+        color: white;
+        text-transform: uppercase;
+      }
+      button {
+        padding: .8rem 2rem;
+        margin-left: 1rem;
+        border-radius: 50px;
+        background-color: white;
+        color: $secondary;
+        border: none;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+        text-transform: uppercase;
+        &:hover{
+          background-color: $secondary;
+          color: white;
+        }
+      }
+    }
+  }
+
+}
+.projects-container{
+  height: 140vh;
+  border: 1px solid red;
+  padding: 2rem 3rem;
+  .projects-info{
+    h3{
+      text-align: center;
+      color: $secondary;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      text-align: center;
+    }
+
+  }
+  .row {
+    width: 100%;
+    margin: 50px auto 0;
+    flex-wrap: wrap;
+    @include flex(center, _, _, 1rem);
+
+    // Base styles
+    .card {
+      float: left;
+      padding: 0 1.7rem;
+      width: 30%;
+      .menu-content {
+        @include cf;
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        li {
+          display: inline-block;
+        }
+        a {
+          color: $white;
+        }
+        span {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          font-size: 10px;
+          font-weight: 700;
+          font-family: 'Open Sans';
+          transform: translate(-50%, 0);
+        }
+      }
+      .wrapper {
+        background-color: $white;
+        min-height: 350px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid green;
+    
+        box-shadow: 0 19px 38px rgba($black, 0.3), 0 15px 12px rgba($black, 0.2);
+        &:hover {
+          .data {
+            transform: translateY(0);
+          }
+        }
+      }
+      .data {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateY(calc(70px + 1em));
+        transition: transform 0.3s;
+        .content {
+          padding: 1em;
+          position: relative;
+          z-index: 1;
+        }
+      }
+      .author {
+        font-size: 12px;
+      }
+      .title {
+        margin-bottom: 10px;
+      }
+      .text {
+        height: 70px;
+        margin: 0;
+      }
+      input[type='checkbox'] {
+        display: none;
+      }
+      input[type='checkbox']:checked + .menu-content {
+        transform: translateY(-60px);
+      }
+    }
+    
+    // Second example styles
+    .example-2 {
+      .wrapper {
+        background: url(https://tvseriescritic.files.wordpress.com/2016/10/stranger-things-bicycle-lights-children.jpg) center / cover no-repeat;
+        &:hover {
+          .menu-content {
+            span {
+              transform: translate(-50%, -10px);
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .header {
+        @include cf;
+        color: $white;
+        padding: 1em;
+        .date {
+          float: left;
+          font-size: 12px;
+        }
+      }
+      .menu-content {
+        float: right;
+        li {
+          margin: 0 5px;
+          position: relative;
+        }
+        span {
+          transition: all 0.3s;
+          opacity: 0;
+        }
+      }
+      .data {
+        color: $white;
+        transform: translateY(calc(70px + 4em));
+      }
+      .title {
+        a {
+          color: $white;
+        }
+      }
+      .button {
+        display: block;
+        width: 100px;
+        margin: 2em auto 1em;
+        text-align: center;
+        font-size: 12px;
+        color: $white;
+        line-height: 1;
+        position: relative;
+        font-weight: 700;
+        &::after {
+          content: '\2192';
+          opacity: 0;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+          transition: all 0.3s;
+        }
+        &:hover {
+          &::after {
+            transform: translate(5px, -50%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+  
+  
+}
+.team-container{
+  padding: 3rem;
+  background-image: url("/public/slide-02.jpg");
+  color: white;
+  .team-info{
+    text-align: center;
+    margin-bottom: 2rem;
+    h3 {
+      color: $secondary;
+      margin-bottom: 1rem;
+    }
+  }
+  .team{
+    display: flex;
+    justify-content: space-evenly;
+    .person{
+      .person-img{
+        img{
+          height: 20rem;
+        }
+      }
+      .person-info {
+        text-align: center;
+        margin-top: 1rem;
+        h3{
+          margin-bottom: .5rem;
+        }
+        p {
+          font-size: 21px;
+        }
+      }
+    }
+  }
+}
+.contact-us{
+  padding: 2rem 0 4rem 4rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+  .contact-info{
+    width: 40%;
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      p{
+        i{
+          color: white;
+          padding: 1rem;
+          font-size: 18px;
+          margin-right: .7rem;
+          background: $accents;
+          border-radius: 50px;
+        }
+      }
+    }
+    h3 {
+      color: $secondary;
+      margin-bottom: 1rem;
+
+    }
+    h1 {
+      font-size: 32px;
+      font-weight: 500;
+      margin-bottom: 2rem;
+    }
+  }
+  form {
+    width: 60%;
+    div{
+      input, textarea{
+        padding: .7rem;
+        margin: 1rem;
+        width: 40%;
+        color: grey;
+        border: 2px solid rgb(235, 235, 235);
+      }
+      textarea{
+        width: 85%;
+      }
+    }
+    .btn {
+      background-color: $secondary;
+      padding: 1rem 1.5rem ;
+      border-radius: 25px;
+      color: white;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      margin-left: 1.2rem;
+      i {
+        transition: .3s ease-in-out;
+        margin: 0 0 0 .2rem;
+      }
+      &:hover {
+        i {
+          margin: 0 0 0 .8rem;
+        }
+      }
+    }
+  }
+}
+
+
+

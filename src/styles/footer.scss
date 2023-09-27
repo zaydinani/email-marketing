@@ -1,0 +1,13 @@
+@import '_variables';
+
+footer{
+    height: 7rem;
+    background: $accents;
+    padding: 0 6rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    p{
+        font-size: 18px;
+    }
+}
