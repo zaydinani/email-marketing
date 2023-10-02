@@ -1,0 +1,77 @@
+@import '_variables';
+
+.hero{
+    padding: 2rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 90vh;
+    .hero-img{ 
+        height: 65vh;
+        width: 50%;
+        img{
+            height: 100%;
+        }
+    }
+    .hero-info{
+        text-align: center;
+        width: 50%;
+
+        h1{
+            font-size: 2.5rem;
+            letter-spacing: .3rem;
+            margin-bottom: 1rem;
+            text-transform: capitalize;
+        }
+        p{ 
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+
+            color: $paragraphColor;
+        }
+    }
+}
+.services{
+    height: 80vh;
+    padding: 2rem 0;
+    background-color: $secondary;
+    @include flex(space-around, center, column, _);
+    .services-info{
+        text-align: center;
+        width: 50%;
+        h1{
+            padding-bottom: 1rem;
+            margin: 0 auto;
+            width: fit-content;
+            border-bottom: 1px solid $paragraphColor;
+        }
+        p{
+            padding-top: 1rem;
+            color: $paragraphColor;
+            font-size: 22px;
+
+        }
+    }
+    .mySwiper{
+        width: 100%;
+        height: 60%;
+        padding: 0 4rem;
+        .service{
+            width: 100%;
+            text-align: center;
+            @include flex(space-evenly, center, column, _);
+            height: 90%;
+            i{
+                font-size: 4rem;
+            }
+            h1{
+                font-size: 24px;
+                font-weight: 400;
+            }
+            p{ 
+                color: $paragraphColor;
+                font-size: 16px;
+            }
+        }
+    }
+}

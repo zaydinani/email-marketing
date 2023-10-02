@@ -1,14 +1,10 @@
 /* COLORS*/
-/*
-$main: #FFF2F2;
-$secondary: #E5E0FF;
+
+$main: #ffffff;
+$secondary: #e8e8e8;
 $accents: #8EA7E9;
 $hover: #7286D3;
-*/
-$main: #ffffff;
-$secondary: #5fb759;
-$accents: linear-gradient(145deg, rgba(51,155,158,1) 0%, rgba(104,204,152,1) 100%);
-
+$paragraphColor: rgb(100, 100, 100);
 
 /*FUNCTIONS*/ 
 @mixin reset-list-styles {
@@ -29,24 +25,16 @@ $accents: linear-gradient(145deg, rgba(51,155,158,1) 0%, rgba(104,204,152,1) 100
     gap:  $gap;
 }
 
-
-
-// Variables
-$regal-blue: #034378;
-$san-juan: #2d4e68;
-$bermuda: #77d7b9;
-$white: #fff;
-$black: #000;
-$open-sans: 'Open Sans',
-sans-serif;
-// clear-fix mixin
-@mixin cf {
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-  }
-  &::after {
-    clear: both;
+.mainBtn {
+  color: white;
+  background-color: $accents;
+  text-decoration: none;
+  padding: .7rem 1.5rem;
+  transition: .3s ease-in-out;
+  font-size: 18px;
+  &:hover {
+    background-color: $hover;
+    border-radius: 15px;
   }
 }
+

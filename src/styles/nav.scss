@@ -23,9 +23,6 @@ nav {
         box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
         left: 0;
         width: 100%;
-        .nav-links {
-            color: black;
-        }
     }
     .logo {
         position: absolute;
@@ -39,7 +36,7 @@ nav {
     .nav-links {
         border: 1px solid green;
         margin-right: 5rem;
-        color: white;
+        color: black;
         ul {
             @include flex(space-between, _, _, _);
             @include reset-list-styles;

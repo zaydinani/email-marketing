@@ -1,12 +1,15 @@
 @import '_variables';
 
 footer{
-    height: 7rem;
+    height: 5rem;
+    width: 100%;
     background: $accents;
     padding: 0 6rem;
     color: white;
-    display: flex;
-    align-items: center;
+    position: fixed;
+    bottom: 0;
+    @include flex(_, center, _, _);
+
     p{
         font-size: 18px;
     }
