@@ -74,6 +74,98 @@ function Landing() {
                 </SwiperSlide>
             </Swiper>
         </div>
+        <div className="features">
+            <div className="features-content">
+                <div className="title">
+                    <h1>our features</h1>
+                    <p>Simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div className="feature">
+                    <i class="fa-solid fa-gears"></i>
+                    <h1>Technical Solutions</h1>
+                    <p>The page to let us know how we can make it even better.</p>
+                </div>
+                <div className="feature">
+                <i class="fa-regular fa-circle-check"></i>
+                    <h1>Unlimited Features</h1>
+                    <p>The page to let us know how we can make it even better.</p>
+                </div>
+            </div>
+            <div className="feature-img">
+                <img src="developer.svg" alt="" />
+            </div>
+        </div>
+        <div className="features second">
+            <div className="features-content">
+                <div className="title">
+                    <h1>our features</h1>
+                    <p>Simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div className="feature">
+                <i class="fa-solid fa-hourglass"></i>
+                    <h1>quick and efficient</h1>
+                    <p>The page to let us know how we can make it even better.</p>
+                </div>
+                <div className="feature">
+                <i class="fa-solid fa-users-line"></i>
+                    <h1>reach more audience</h1>
+                    <p>The page to let us know how we can make it even better.</p>
+                </div>
+            </div>
+            <div className="feature-img">
+                <img src="team.svg" alt="" />
+            </div>
+        </div>
+        <div className="portfolio">
+            <div className="portfolio-text">
+                <h1>our portfolio</h1>
+                <p>Simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div className="projects">
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+                <div className="project">
+                    <img src="/zayd.jpg" alt="" />
+                    <p>project A</p>
+                </div>
+            </div>
+        </div>
+        <div className="newsletter">
+            <div className="newsletter-text">
+                <h1>Subscribe to our newsletter.</h1>
+                <p>Simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <form action="">
+                <input type="text" placeholder='enter your Email address'/>
+                <button className='mainBtn'>subscribe</button>
+            </form>
+        </div>
     </>
   )
 }

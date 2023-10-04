@@ -46,7 +46,7 @@ nav {
                 transition: .3s ease-in-out;
                 &:hover {
                     cursor: pointer;
-                    opacity: 0.5;
+                    color: $hover;
                 }
             }
         }
