@@ -6,10 +6,7 @@ footer{
     background: $accents;
     padding: 0 6rem;
     color: white;
-    position: fixed;
-    bottom: 0;
     @include flex(_, center, _, _);
-
     p{
         font-size: 18px;
     }
