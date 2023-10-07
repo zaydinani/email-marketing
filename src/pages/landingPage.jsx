@@ -12,7 +12,16 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
 function Landing() {
-
+  const breakpoints = {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  };
     return (
         <>
             <div className="hero">
@@ -43,6 +52,8 @@ function Landing() {
                         "--swiper-pagination-color": "#8EA7E9",
 
                     }}
+                    breakpoints={breakpoints}
+
                 >
                     <SwiperSlide>
                         <div className="service">
