@@ -31,6 +31,7 @@ $paragraphColor: rgb(100, 100, 100);
   text-decoration: none;
   padding: .7rem 1.5rem;
   transition: .3s ease-in-out;
+  cursor: pointer;
   font-size: 18px;
   &:hover {
     background-color: $hover;

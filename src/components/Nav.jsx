@@ -1,5 +1,6 @@
 import '../styles/nav.scss'
 import React, { useState, useEffect, useRef } from 'react';
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function Nav() {
   //-----------------
@@ -37,20 +38,88 @@ function Nav() {
           <img src="/logo.png" alt="" />
         </div>
         <div className="nav-links">
-        <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>projects</li>
-            <li>contact us</li>
+          <ul>
+            <Link 
+              className='navLink'
+              to="hero"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+            >home
+            </Link>
+            <Link 
+              className='navLink'
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={-70}
+            >services
+            </Link>
+            <Link 
+              className='navLink'
+              to="projects"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={-70}
+            >projects
+            </Link>
+            <Link 
+              className='navLink'
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+            >contact
+            </Link>
           </ul>
         </div>
         {isMenuActive ? (
         <div className='mobileNavContainer'>
           <ul>
-            <li>home</li>
-            <li>about</li>
-            <li>projects</li>
-            <li>contact us</li>
+            <Link 
+              onClick={closeMenu}
+              className='mobileNavLinks'
+              to="hero"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+            >home
+            </Link>
+            <Link 
+              onClick={closeMenu}
+              className='mobileNavLinks'
+              to="services"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={-40}
+            >services
+            </Link>
+            <Link 
+              onClick={closeMenu}
+              className='mobileNavLinks'
+              to="projects"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={-70}
+            >projects
+            </Link>
+            <Link 
+              onClick={closeMenu}
+              className='mobileNavLinks'
+              to="contact"
+              spy={true}
+              smooth={true}
+              duration={1000}
+              offset={0}
+            >contact
+            </Link>
           </ul>
         </div>
         ) : null}
